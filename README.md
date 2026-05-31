@@ -4,32 +4,46 @@
 [![Dataset](https://img.shields.io/badge/Dataset-Locust--mini-green.svg)](https://github.com/Chloe-Liu33/Locust-mini)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> [cite_start]Official implementation of the paper: **"Camouflaged locust segmentation based on PraNet"** (Computers and Electronics in Agriculture, 2022)[cite: 757, 761].
+> Official implementation of the paper: **"Camouflaged locust segmentation based on PraNet"** (Computers and Electronics in Agriculture, 2022).
 
 ## 📌 Overview
 
-[cite_start]Precise detection and segmentation of camouflaged pests are critical for assisting plant protection robots in catching and killing locusts without large-scale pesticide spraying[cite: 772, 788]. [cite_start]This repository provides an end-to-end deep learning framework, **EG-PraNet**, designed to accurately segment locusts that camouflage themselves within complex agricultural backgrounds[cite: 773, 779]. 
+Precise detection and segmentation of camouflaged pests are critical for assisting plant protection robots in real-time agricultural management. This repository provides an end-to-end deep learning framework, **EG-PraNet**, designed to accurately segment locusts that camouflage themselves within complex natural backgrounds.
 
-[cite_start]By optimizing the feature extraction pipeline and enhancing data robustness, EG-PraNet achieves state-of-the-art efficiency and accuracy on the custom **Locust-mini** dataset[cite: 775, 779].
-
-### ✨ Key Architectural Enhancements
-* **Group Reverse (GR) Module:** We improved the original Reverse Attention (RA) module by grouping and fusing features. [cite_start]This reduces redundant convolution layers and multiplication calculations, lowering the calculating cost while extracting more useful information[cite: 776, 777].
-* [cite_start]**Robust Image Augmentation:** To make the model more robust against complex field conditions, the training pipeline incorporates random pepper noise, color enhancement, random cropping, and resolution lowering[cite: 778].
-* [cite_start]**Superior Performance:** Compared to the baseline PraNet, EG-PraNet increases the Dice coefficient by 0.126 and IoU by 0.152[cite: 780]. [cite_start]Furthermore, inference throughput is highly optimized for real-time robotic applications, achieving 16.4 fps on a Tesla K80[cite: 781, 1042].
+We optimized the feature extraction pipeline and enhanced data robustness, allowing EG-PraNet to achieve state-of-the-art efficiency and accuracy on our custom **Locust-mini** dataset
 
 ## 🧠 Model Architecture
 
+Our framework introduces highly efficient structural improvements to balance computational cost and segmentation precision. The EG-PraNet architecture utilizes a ResNet50 backbone combined with one Parallel Partial Decoder (PPD) and three Group Reverse (GR) modules to fuse multi-level semantic information.
+
+
 <p align="center">
-  <img src="./assets/architecture.png" alt="Overview of EG-PraNet" width="90%">
+  <img src="./assets/Eg_PraNet.png" alt="Overview of EG-PraNet Architecture" width="90%">
 </p>
 <p align="center">
-  <em>Fig. [cite_start]1: Overview of EG-PraNet, based on ResNet50 with one Parallel Partial Decoder (PPD) module and three Group Reverse (GR) modules[cite: 863, 953].</em>
+  <em>Fig 1: The overall architecture of EG-PraNet.</em>
 </p>
+
+## 📊 Visual Results & Performance
+
+EG-PraNet exhibits superior segmentation capabilities, especially in distinguishing targets with weak boundaries and colors highly similar to their backgrounds[cite: 2]. 
+
+
+<p align="center">
+  <img src="./assets/results.png" alt="Segmentation Visual Comparison" width="90%">
+</p>
+<p align="center">
+  <em>Fig 2: Comparison of segmentation masks against other baselines.</em>
+</p>
+
+**Key Performance Metrics:**
+* **Accuracy Leap:** Compared to the baseline PraNet, EG-PraNet increases the Dice coefficient by **0.126** and IoU by **0.152**.
+* **High Throughput:** Optimized for real-time robotic deployment, achieving **16.4 fps** on a Tesla K80 GPU.
 
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
-Clone the repository and install the required dependencies:
+Ensure your environment is set up. We recommend using a virtual environment:
 ```bash
 git clone [https://github.com/Chloe-Liu33/PraNet-object-segmentation.git](https://github.com/Chloe-Liu33/PraNet-object-segmentation.git)
 cd PraNet-object-segmentation
