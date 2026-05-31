@@ -10,7 +10,7 @@
 
 Precise detection and segmentation of camouflaged pests are critical for assisting plant protection robots in real-time agricultural management. This repository provides an end-to-end deep learning framework, **EG-PraNet**, designed to accurately segment locusts that camouflage themselves within complex natural backgrounds.
 
-We optimized the feature extraction pipeline and enhanced data robustness, allowing EG-PraNet to achieve state-of-the-art efficiency and accuracy on our custom **Locust-mini** dataset
+We optimized the feature extraction pipeline and enhanced data robustness, allowing EG-PraNet to achieve state-of-the-art efficiency and accuracy on our custom [Locust-mini](https://github.com/Chloe-Liu33/Locust-mini) dataset
 
 ## 🧠 Model Architecture
 
