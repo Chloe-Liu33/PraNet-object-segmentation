@@ -18,7 +18,7 @@ Our framework introduces highly efficient structural improvements to balance com
 
 
 <p align="center">
-  <img src="./assets/Eg_PraNet.png" alt="Overview of EG-PraNet Architecture" width="90%">
+  <img src="./assets/EG_PraNet.png" alt="Overview of EG-PraNet Architecture" width="90%">
 </p>
 <p align="center">
   <em>Fig 1: The overall architecture of EG-PraNet.</em>
